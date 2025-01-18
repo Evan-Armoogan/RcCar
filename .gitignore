@@ -1,0 +1,9 @@
+# output binaries
+bin/
+
+# intermediate build directories
+build/
+
+# CMake files
+CMakeLists.txt
+*.cmake

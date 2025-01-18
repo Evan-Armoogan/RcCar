@@ -1,0 +1,6 @@
+[submodule "make/premake/cmake"]
+	path = make/premake/cmake
+	url = git@github.com:Evan-Armoogan/premake-cmake.git
+[submodule "make/toolchains"]
+	path = make/toolchains
+	url = git@github.com:Evan-Armoogan/arm-cmake-toolchains.git
