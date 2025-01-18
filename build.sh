@@ -23,3 +23,12 @@ cmake -S . -G Ninja -Bbuild -DCMAKE_TOOLCHAIN_FILE="make/toolchains/arm-gcc-tool
 echo ""
 echo "Compiling"
 (cd build || exit; ninja)
+
+# Output file sizes and generate hex files
+for filename in bin/"$CONFIG"/*.elf; do
+    FILE="$(basename "$filename")"
+    NAME=${FILE%.elf}
+    arm-none-eabi-size -A bin/"$CONFIG"/"$NAME".elf
+    arm-none-eabi-objcopy -O ihex bin/"$CONFIG"/"$NAME".elf bin/"$CONFIG"/"$NAME".hex
+done
+echo "Compilation complete"
