@@ -13,7 +13,7 @@ fi
 # Remove intermediate directories which could conflict with build
 rm -rf build
 rm -f CMakeLists.txt
-rm -f ./*glob*.cmake
+rm -f ./*cmake*
 
 # Generate Ninja build configuration using premake (cmake is used as an intermediate utility)
 ./make/premake/premake5.exe cmake

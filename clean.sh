@@ -3,5 +3,5 @@
 rm -rf bin
 rm -rf build
 rm -f CMakeLists.txt
-rm -f ./*glob*.cmake
+rm -f ./*cmake*
 echo "Clean complete"
